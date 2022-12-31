@@ -1,0 +1,9 @@
+{
+    "/server" : {
+        "target": "https://anthonyikeda-super-cod-jr5xrq74v39vq-5000.preview.app.github.dev",
+        "secure": true,
+        "pathRewrite": {
+            "^/server": ""
+        }
+    }
+}

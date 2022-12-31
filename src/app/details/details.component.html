@@ -1,0 +1,21 @@
+<p>details works!</p>
+<form [formGroup]="basicGroup" #userForm="ngForm" (ngSubmit)="publishDetails()">
+    <table>
+        <tr>
+            <td>First name</td>
+            <td><input formControlName="firstname"></td>
+        </tr>
+        <tr>
+            <td>Last name</td>
+            <td><input formControlName="lastname"></td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td><input formControlName="age"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button type="submit" [disabled]="!userForm.form.valid">Submit</button></td>
+        </tr>
+
+    </table>
+</form>

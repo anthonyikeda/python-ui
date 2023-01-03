@@ -7,12 +7,16 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { DetailsComponent } from './details/details.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { UserInventoryEditorComponent } from './user-inventory-editor/user-inventory-editor.component';
+import { DialogComponent } from './dialog/dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
-    DetailsComponent
+    DetailsComponent,
+    UserInventoryEditorComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,

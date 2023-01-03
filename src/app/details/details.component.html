@@ -1,17 +1,30 @@
 <p>details works!</p>
+<div class="content">
+<div class="card highlight-card">
+    
 <form [formGroup]="basicGroup" #userForm="ngForm" (ngSubmit)="publishDetails()">
     <table>
         <tr>
             <td>First name</td>
-            <td><input formControlName="firstname"></td>
+            <td>
+                <input formControlName="firstname">
+                <div *ngIf="firstname?.invalid && (firstname?.dirty || firstname?.touched)">Firstname is required</div>
+            </td>
         </tr>
         <tr>
             <td>Last name</td>
-            <td><input formControlName="lastname"></td>
+            <td>
+                <input formControlName="lastname">
+                <div *ngIf="lastname?.invalid && (lastname?.dirty || lastname?.touched)">Last name is required</div>
+            </td>
         </tr>
         <tr>
             <td>Age</td>
-            <td><input formControlName="age"></td>
+            <td>
+                <input formControlName="age">
+                <div *ngIf="age?.invalid && (age?.dirty || age?.touched) && !age?.hasError('max')">Age is required</div>
+                <div *ngIf="age?.invalid && age?.hasError('max')">Age is too high</div>
+            </td>
         </tr>
         <tr>
             <td colspan="2"><button type="submit" [disabled]="!userForm.form.valid">Submit</button></td>
@@ -19,3 +32,5 @@
 
     </table>
 </form>
+</div>
+</div>

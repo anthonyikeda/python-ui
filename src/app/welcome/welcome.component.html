@@ -1,2 +1,13 @@
 <p>welcome works!</p>
 <app-details></app-details>
+<hr>
+<h1>{{memberName}}'s Inventory</h1>
+<app-user-inventory-editor></app-user-inventory-editor>
+
+<button (click)="openModal('equipment')">Open</button>
+
+<app-dialog id="equipment">
+    <p>Custom Dialog works!</p>
+    <p>More content that is only on the dialog.</p>
+    <button (click)="closeModal('equipment');">Close</button>
+</app-dialog>

@@ -1,0 +1,5 @@
+<p>user-inventory-editor works!</p>
+<select #equipment size="10" class="equipment-list">
+    <option *ngFor="let item of availableEquipment">{{item}}</option>
+</select><br>
+<button (click)="addItem()">Add Item</button>

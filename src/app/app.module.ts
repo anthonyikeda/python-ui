@@ -9,6 +9,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UserInventoryEditorComponent } from './user-inventory-editor/user-inventory-editor.component';
 import { DialogComponent } from './dialog/dialog.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,9 @@ import { DialogComponent } from './dialog/dialog.component';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MaterialModule,
     HttpClientModule
   ],
   providers: [],

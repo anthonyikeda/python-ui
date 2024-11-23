@@ -1,5 +1,18 @@
 <p>user-inventory-editor works!</p>
-<select #equipment size="10" class="equipment-list">
-    <option *ngFor="let item of availableEquipment">{{item}}</option>
-</select><br>
+<form [formGroup]="userEquipment">
+    <mat-form-field appearance="fill">
+        <mat-label>Equipment</mat-label>
+        <mat-select [formControl]="availableItems" multiple>
+            <mat-option *ngFor="let item of availableEquipment" [value]="item">{{item}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Provisioning</mat-label>
+        <mat-select formControlName="selectedEquipment" multiple>
+            <mat-option *ngFor="let item of selectedEquipment" [value]="item">{{item}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</form>
+<br>
 <button (click)="addItem()">Add Item</button>

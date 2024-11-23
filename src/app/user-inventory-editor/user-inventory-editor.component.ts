@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { InventoryService } from './inventory.service';
 
 
 @Component({
@@ -12,8 +13,10 @@ export class UserInventoryEditorComponent implements OnInit {
   userEquipment: FormGroup;
 
   availableEquipment: string[] = [];
+  availableItems = new FormControl();
+  selectedEquipment: string[] = [];
 
-  constructor(private builder: FormBuilder) {
+  constructor(private builder: FormBuilder, private service: InventoryService) {
     this.userEquipment = builder.group({
       selectedEquipment: ['']
     });
@@ -27,6 +30,18 @@ export class UserInventoryEditorComponent implements OnInit {
   
 
   addItem(): void {
-    
+    console.log(this.availableItems?.value);
+    this.selectedEquipment = [];
+    this.availableItems?.value.forEach((value : string) => {
+      console.log(value);
+      this.selectedEquipment.push(value);
+    });
+    this.userEquipment.get('selectedEquipment')?.setValue(this.selectedEquipment);
+    this.service.updateInventory('bob', this.selectedEquipment).subscribe({
+      next: (data) => console.log(`Data is ${data}`),
+      error: (error) => console.log(error),
+      complete: () => console.log("Updated inventory")
+    });
+
   }
 }

@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { MaterialModule } from '../material/material.module';
 
 @Component({
   selector: 'app-details',
+  standalone: true,
+  imports: [MaterialModule, ReactiveFormsModule],
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.css']
 })

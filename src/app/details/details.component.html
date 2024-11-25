@@ -8,22 +8,30 @@
             <td>First name</td>
             <td>
                 <input formControlName="firstname">
-                <div *ngIf="firstname?.invalid && (firstname?.dirty || firstname?.touched)">Firstname is required</div>
+                @if (firstname?.invalid && (firstname?.dirty || firstname?.touched)) {
+                    <div>Firstname is required</div>
+                }
             </td>
         </tr>
         <tr>
             <td>Last name</td>
             <td>
                 <input formControlName="lastname">
-                <div *ngIf="lastname?.invalid && (lastname?.dirty || lastname?.touched)">Last name is required</div>
+                @if (lastname?.invalid && (lastname?.dirty || lastname?.touched)) {
+                    <div>Last name is required</div>
+                }
             </td>
         </tr>
         <tr>
             <td>Age</td>
             <td>
                 <input formControlName="age">
-                <div *ngIf="age?.invalid && (age?.dirty || age?.touched) && !age?.hasError('max')">Age is required</div>
-                <div *ngIf="age?.invalid && age?.hasError('max')">Age is too high</div>
+                @if (age?.invalid && (age?.dirty || age?.touched) && !age?.hasError('max')) {
+                    <div>Age is required</div>
+                }
+                @if(age?.invalid && age?.hasError('max')) {
+                    <div>Age is too high</div>
+                }
             </td>
         </tr>
         <tr>

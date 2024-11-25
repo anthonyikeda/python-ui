@@ -3,6 +3,10 @@ import { DialogService } from './dialog.service';
 
 @Component({
   selector: 'app-dialog',
+  standalone: true,
+  imports : [
+  
+  ],
   templateUrl: './dialog.component.html',
   styleUrls: ['./dialog.component.less'],
   encapsulation: ViewEncapsulation.None

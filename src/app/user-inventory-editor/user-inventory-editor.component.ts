@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { InventoryService } from './inventory.service';
 import { MaterialModule } from '../material/material.module';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
     selector: 'app-user-inventory-editor',
-    imports: [MaterialModule, ReactiveFormsModule],
+    imports: [MaterialModule, ReactiveFormsModule, CommonModule],
     templateUrl: './user-inventory-editor.component.html',
     styleUrls: ['./user-inventory-editor.component.css']
 })

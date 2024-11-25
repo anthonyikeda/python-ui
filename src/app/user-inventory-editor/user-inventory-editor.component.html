@@ -3,14 +3,18 @@
     <mat-form-field appearance="fill">
         <mat-label>Equipment</mat-label>
         <mat-select [formControl]="availableItems" multiple>
-            <mat-option *ngFor="let item of availableEquipment" [value]="item">{{item}}</mat-option>
+            @for(item of availableEquipment; track item) {
+                <mat-option [value]="item">{{item}}</mat-option>
+            }
         </mat-select>
     </mat-form-field>
 
     <mat-form-field appearance="fill">
         <mat-label>Provisioning</mat-label>
         <mat-select formControlName="selectedEquipment" multiple>
-            <mat-option *ngFor="let item of selectedEquipment" [value]="item">{{item}}</mat-option>
+            @for(item of selectedEquipment; track item) {
+                <mat-option [value]="item">{{item}}</mat-option>
+            }
         </mat-select>
     </mat-form-field>
 </form>

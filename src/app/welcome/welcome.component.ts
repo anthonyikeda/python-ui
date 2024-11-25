@@ -5,11 +5,10 @@ import { UserInventoryEditorComponent } from '../user-inventory-editor/user-inve
 import { DetailsComponent } from '../details/details.component';
 
 @Component({
-  selector: 'app-welcome',
-  standalone: true,
-  imports: [DialogComponent, UserInventoryEditorComponent, DetailsComponent],
-  templateUrl: './welcome.component.html',
-  styleUrls: ['./welcome.component.css']
+    selector: 'app-welcome',
+    imports: [DialogComponent, UserInventoryEditorComponent, DetailsComponent],
+    templateUrl: './welcome.component.html',
+    styleUrls: ['./welcome.component.css']
 })
 export class WelcomeComponent {
 

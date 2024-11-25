@@ -4,11 +4,10 @@ import { HttpClient } from '@angular/common/http';
 import { MaterialModule } from '../material/material.module';
 
 @Component({
-  selector: 'app-details',
-  standalone: true,
-  imports: [MaterialModule, ReactiveFormsModule],
-  templateUrl: './details.component.html',
-  styleUrls: ['./details.component.css']
+    selector: 'app-details',
+    imports: [MaterialModule, ReactiveFormsModule],
+    templateUrl: './details.component.html',
+    styleUrls: ['./details.component.css']
 })
 export class DetailsComponent {
 

@@ -5,11 +5,10 @@ import { MaterialModule } from '../material/material.module';
 
 
 @Component({
-  selector: 'app-user-inventory-editor',
-  standalone: true,
-  imports: [MaterialModule, ReactiveFormsModule],
-  templateUrl: './user-inventory-editor.component.html',
-  styleUrls: ['./user-inventory-editor.component.css']
+    selector: 'app-user-inventory-editor',
+    imports: [MaterialModule, ReactiveFormsModule],
+    templateUrl: './user-inventory-editor.component.html',
+    styleUrls: ['./user-inventory-editor.component.css']
 })
 export class UserInventoryEditorComponent implements OnInit {
 

@@ -2,14 +2,11 @@ import { Component, ElementRef, Input, OnDestroy, OnInit, ViewEncapsulation } fr
 import { DialogService } from './dialog.service';
 
 @Component({
-  selector: 'app-dialog',
-  standalone: true,
-  imports : [
-  
-  ],
-  templateUrl: './dialog.component.html',
-  styleUrls: ['./dialog.component.less'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'app-dialog',
+    imports: [],
+    templateUrl: './dialog.component.html',
+    styleUrls: ['./dialog.component.less'],
+    encapsulation: ViewEncapsulation.None
 })
 export class DialogComponent implements OnInit, OnDestroy {
 
